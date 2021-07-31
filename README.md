@@ -1,8 +1,27 @@
-# Pre Fellowship Template
+# Pear
+The Python package for (pear)allelizing your tasks across multiple CPU threads.
 
-This is a template to help you get started with your projects. Find out more information inside of the Fellow Handbook.
+## Usage
+ 1. Create a `Pear()` object. This will be a wrapper for all of your multithreaded processes.
+ 2. Identify the functions on which you would like to paralleilze computation.
+ 3. Add your tasks to the Pear object. If a potential race condition is detected, an error will be thrown.
+ 4. Run the paraellelized processes.
 
-This template has a `main` and `staging` branch already setup. 
+## Example
+```
+from pear import Pear
 
-- Code will only be merged into `main` once your Pod Leader has reviewed your code. At the end of each week, there will be a code freeze. Your Pod Leader will review it before it's merged.
-- During the week, you'll merge code into `staging`. 
+# First function to be parallelized
+def t1(num1, num2):
+    print('t1: ', num1 + num2)
+    
+# Second function to be paralellized
+def t2(num):
+    print('t2: ', num) 
+
+# Create pear object, add threads, and run
+pear = Pear()
+pear.add_thread(t1, [4, 5])
+pear.add_thread(t2, 4)
+pear.run()
+```
