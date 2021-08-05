@@ -41,7 +41,7 @@ class TestPear(unittest.TestCase):
         self.pear.add_thread(t3, [ITERATIONS, INCREMENT])
         self.pear.add_thread(t4, [ITERATIONS, INCREMENT])
 
-    def test_unthreaded(self):
+    def __run_unthreaded__(self):
         start = time.time()
         print("----------------------------------------------------------------------")
         print("UNTHREADED BENCHMARK")
@@ -51,9 +51,10 @@ class TestPear(unittest.TestCase):
         t4(ITERATIONS, INCREMENT)
         end = time.time()
         print(end - start, "s")
+        return end - start
         
 
-    def test_threaded(self):
+    def __run_threaded__(self):
         start = time.time()
         self.__create_pear__()
         self.__init_pear__()
@@ -62,7 +63,13 @@ class TestPear(unittest.TestCase):
         self.pear.run()
         end = time.time()
         print(end - start, "s")
+        return end - start
 
+    def test_benchmark(self):
+        threaded_time = self.__run_threaded__()
+        unthreaded_time = self.__run_unthreaded__()
+        print("----------------------------------------------------------------------")
+        print("Improvement: ", (unthreaded_time/threaded_time) * 100, "%")
 
 if __name__ == '__main__':
     unittest.main()
