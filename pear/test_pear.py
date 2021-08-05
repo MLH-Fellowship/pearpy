@@ -8,7 +8,9 @@ def t2(num):
 
 pear = Pear()
 pear.add_thread(t1, [4, 5])
-pear.add_thread(t2, 4)
+pear.add_thread(t1, [4, 9])
 print(pear.get_threads())
-pear.remove_thread(pear.get_thread_ids()[0])
+#pear.remove_thread(pear.get_thread_ids()[0])
 print(pear.get_threads())
+print(pear.get_thread_names())
+pear.run()
