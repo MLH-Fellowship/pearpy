@@ -31,10 +31,10 @@ def t4(num, inc):
         sum /= inc
     return sum
 
-class TestPear(unittest.TestCase):
+class Benchmark(unittest.TestCase):
     def __create_pear__(self):
         self.pear = Pear()
-        
+
     def __init_pear__(self):
         self.pear.add_thread(t1, [ITERATIONS, INCREMENT])
         self.pear.add_thread(t2, [ITERATIONS, INCREMENT])
@@ -52,7 +52,7 @@ class TestPear(unittest.TestCase):
         end = time.time()
         print(end - start, "s")
         return end - start
-        
+
 
     def __run_threaded__(self):
         start = time.time()
