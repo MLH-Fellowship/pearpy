@@ -25,3 +25,24 @@ pear.add_thread(t1, [4, 5])
 pear.add_thread(t2, 4)
 pear.run()
 ```
+
+## Benchmarks
+Benchmarks can be examined via the `make benchmark` command. This will display the threaded vs unthreaded runtimes on a set script, along with the percent improvement between the two. Here is an example of what the benchmarks should look like:
+```
+----------------------------------------------------------------------
+THREADED BENCHMARK
+3.8507602214813232 s
+----------------------------------------------------------------------
+UNTHREADED BENCHMARK
+13.90523624420166 s
+----------------------------------------------------------------------
+Improvement:  361.1036638072611 %
+.
+----------------------------------------------------------------------
+Ran 1 test in 17.757s
+
+OK
+```
+
+## Contributing
+Pear is open source and contributions from anyone are welcome. To contribute to this project, please submit issues and pull requests via GitHub. In order to successfullly merge a pull request, all unit tests must be passed when run via `make test`. Thank you!
