@@ -1,3 +1,4 @@
+[![Build](https://github.com/MLH-Fellowship/pod-3.1.4-team-2/actions/workflows/build.yml/badge.svg)](https://github.com/MLH-Fellowship/pod-3.1.4-team-2/actions/workflows/build.yml)
 # Pear
 The Python package for (pear)allelizing your tasks across multiple CPU threads.
 
