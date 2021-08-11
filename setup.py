@@ -9,7 +9,7 @@ setup(
   author = 'Aiden Szeto & Mark Nawar',
   author_email = 'aszeto35@gmail.com',
   url = 'https://github.com/MLH-Fellowship/pear',
-  download_url = 'https://github.com/user/reponame/archive/v_01.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/MLH-Fellowship/pear/archive/refs/tags/v0.1.0.tar.gz',
   keywords = ['multithreading', 'parallelism', 'processes'],
   classifiers=[
     'Development Status :: 3 - Alpha',
