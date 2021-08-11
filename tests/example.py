@@ -1,9 +1,9 @@
-from pear.pear import Pear
+from pearpy.pear import Pear
 
 # First function to be parallelized
 def t1(num1, num2):
     print('t1: ', num1 + num2)
-    
+
 # Second function to be paralellized
 def t2(num):
     print('t2: ', num) 

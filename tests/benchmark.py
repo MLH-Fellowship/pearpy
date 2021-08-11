@@ -1,4 +1,4 @@
-from pear.pear import Pear
+from pearpy.pear import Pear
 import unittest
 import random
 import time
