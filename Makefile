@@ -1,11 +1,11 @@
 PYTHON=python
 POETRY=poetry
 
-test: 
-	$(PYTHON) -m test.test_pear
+test:
+	$(PYTHON) -m tests.test_pear
 
 benchmark:
-	${PYTHON} -m test.benchmark
+	${PYTHON} -m tests.benchmark
 
 install:
-	$(POETRY) install
+	$(POETRY) install --no-interaction
