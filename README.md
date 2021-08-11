@@ -14,10 +14,10 @@ from pear import Pear
 # First function to be parallelized
 def t1(num1, num2):
     print('t1: ', num1 + num2)
-    
+
 # Second function to be paralellized
 def t2(num):
-    print('t2: ', num) 
+    print('t2: ', num)
 
 # Create pear object, add threads, and run
 pear = Pear()
@@ -45,4 +45,7 @@ OK
 ```
 
 ## Contributing
-Pear is open source and contributions from anyone are welcome. To contribute to this project, please submit issues and pull requests via GitHub. In order to successfullly merge a pull request, all unit tests must be passed when run via `make test`. Thank you!
+Pear is open source and contributions from anyone are welcome. To contribute to this project, please submit issues and pull requests via GitHub. In order to successfully merge a pull request, all unit tests must be passed when run via `make test`. Thank you!
+
+## License
+MIT
