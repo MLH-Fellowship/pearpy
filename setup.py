@@ -9,14 +9,15 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 setup(
   name = 'pearpy',
   packages = ['pearpy'],
-  version = '0.1.1',
+  version = '0.1.2',
   license='MIT',
   description = 'A Python package for writing multithreaded code.',
   long_description=long_description,
+  long_description_content_type="text/markdown",
   author = 'Aiden Szeto',
   author_email = 'aszeto35@gmail.com',
   url = 'https://github.com/MLH-Fellowship/pear',
-  download_url = 'https://github.com/MLH-Fellowship/pear/archive/refs/tags/v0.1.1.tar.gz',
+  download_url = 'https://github.com/MLH-Fellowship/pear/archive/refs/tags/v0.1.2.tar.gz',
   keywords = ['multithreading', 'parallelism', 'processes'],
   classifiers=[
     'Development Status :: 3 - Alpha',
