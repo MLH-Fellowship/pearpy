@@ -1,4 +1,7 @@
 [![Build](https://github.com/MLH-Fellowship/pod-3.1.4-team-2/actions/workflows/build.yml/badge.svg)](https://github.com/MLH-Fellowship/pod-3.1.4-team-2/actions/workflows/build.yml)
+[![PyPI download total](https://img.shields.io/pypi/dt/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+[![PyPI version shields.io](https://img.shields.io/pypi/v/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+
 # Pear
 The Python package for (pear)allelizing your tasks across multiple CPU threads.
 
@@ -10,7 +13,7 @@ The Python package for (pear)allelizing your tasks across multiple CPU threads.
 
 ## Example
 ```
-from pear import Pear
+from pearpy.pear import Pear
 
 # First function to be parallelized
 def t1(num1, num2):
