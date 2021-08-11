@@ -1,12 +1,12 @@
 from distutils.core import setup
 
 setup(
-  name = 'pear',
+  name = 'pearpy',
   packages = ['pear'],
   version = '0.1.0',
   license='MIT',
   description = 'A Python package for writing multithreaded code and parallelizing tasks across CPU threads.',
-  author = 'Aiden Szeto & Mark Nawar',
+  author = 'Aiden Szeto',
   author_email = 'aszeto35@gmail.com',
   url = 'https://github.com/MLH-Fellowship/pear',
   download_url = 'https://github.com/MLH-Fellowship/pear/archive/refs/tags/v0.1.0.tar.gz',
