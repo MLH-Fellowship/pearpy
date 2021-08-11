@@ -1,8 +1,15 @@
 [![Build](https://github.com/MLH-Fellowship/pod-3.1.4-team-2/actions/workflows/build.yml/badge.svg)](https://github.com/MLH-Fellowship/pod-3.1.4-team-2/actions/workflows/build.yml)
 [![PyPI version](https://img.shields.io/pypi/v/pearpy)](https://pypi.org/project/pearpy/)
 
-# Pear
+# Pearpy
 The Python package for (pear)allelizing your tasks across multiple CPU threads.
+
+## Installation
+The latest version of Pearpy can be installed with:
+```
+pip install pearpy
+```
+To stay up to date with Pearpy's releases, visit [our page](https://pypi.org/project/pearpy/) on PyPi
 
 ## Usage
  1. Create a `Pear()` object. This will be a wrapper for all of your multithreaded processes.
