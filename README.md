@@ -9,7 +9,7 @@ The latest version of Pearpy can be installed with:
 ```
 pip install pearpy
 ```
-To stay up to date with Pearpy's releases, visit [our page](https://pypi.org/project/pearpy/) on PyPi
+To stay up to date with Pearpy's releases, visit the [official page](https://pypi.org/project/pearpy/) on PyPi!
 
 ## Usage
  1. Create a `Pear()` object. This will be a wrapper for all of your multithreaded processes.
