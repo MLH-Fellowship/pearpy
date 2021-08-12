@@ -39,12 +39,15 @@ pear.run()
 ## Race Condition Handling
 When multiple threads utilize the same function, Pear will automatically generate locks for each resource. This allows developers to utilize Pear's multithreading without having to worry about inaccurate data caused by race conditions. The following example shows how race conditions are handled:
 ```
+from pearpy.pear import Pear
+
 global_var = 10
 
 # This function reads from and writes to a global variable
 def t_duplicated(num):
+    global global_var
     print('t_duplicated: ', num + global_var)
-    global_var++
+    global_var += 1
 
 # Pear object created with two threads accessing a shared resource
 # A race condition is detected and locks are generated
