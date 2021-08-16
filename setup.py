@@ -17,7 +17,7 @@ setup(
   author = 'Aiden Szeto',
   author_email = 'aszeto35@gmail.com',
   url = 'https://github.com/MLH-Fellowship/pear',
-  download_url = 'https://github.com/MLH-Fellowship/pear/archive/refs/tags/v0.1.2.tar.gz',
+  download_url = 'https://github.com/MLH-Fellowship/pear/archive/refs/tags/v0.1.3.tar.gz',
   keywords = ['multithreading', 'parallelism', 'processes'],
   classifiers=[
     'Development Status :: 3 - Alpha',
