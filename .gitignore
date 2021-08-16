@@ -3,4 +3,5 @@
 */__pycache__
 poetry.lock
 
+dist
 pearpy.egg-info

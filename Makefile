@@ -9,3 +9,8 @@ benchmark:
 
 install:
 	$(POETRY) install --no-interaction
+
+publish:
+	make install
+	$(PYTHON) setup.py sdist
+	twine upload --skip-existing dist/*

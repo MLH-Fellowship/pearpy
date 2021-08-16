@@ -9,7 +9,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 setup(
   name = 'pearpy',
   packages = ['pearpy'],
-  version = '0.1.2',
+  version = '0.1.3',
   license='MIT',
   description = 'A Python package for writing multithreaded code.',
   long_description=long_description,
