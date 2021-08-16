@@ -9,20 +9,24 @@ class Pear():
     def __init__(self):
         self.threads = set([])
 
-    def thread_task(self , args):
-        # Lock resources if threads utilize the same function
-        if self.get_thread_names().count(args[1].__name__) == 1:
-            if type(args[2]) is list:
-                args[1](*(args[2]))
+    def thread_task(self, args):
+        if args[2] is not None:
+            # Lock resources if threads utilize the same function
+            # args[0] holds locks, args[1] holds function, args[2] holds args
+            if self.get_thread_names().count(args[1].__name__) == 1:
+                if type(args[2]) is list:
+                    args[1](*(args[2]))
+                else:
+                    args[1](args[2])
             else:
-                args[1](args[2])
+                args[0][args[1].__name__].acquire()
+                if type(args[2]) is list:
+                    args[1](*(args[2]))
+                else:
+                    args[1](args[2])
+                args[0][args[1].__name__].release()
         else:
-            args[0][args[1].__name__].acquire()
-            if type(args[2]) is list:
-                args[1](*(args[2]))
-            else:
-                args[1](args[2])
-            args[0][args[1].__name__].release()
+            args[1]()
 
     def get_thread_by_id(self, id):
         for thread in self.threads:
@@ -41,7 +45,7 @@ class Pear():
     def get_thread_ids(self):
         return [thread.get_id() for thread in self.threads]
 
-    def add_thread(self, func, args):
+    def add_thread(self, func, args=None):
         fun_arg = (self.locks , func , args)
         # Create lock if thread uses duplicate function
         if not func.__name__ in self.locks.keys():

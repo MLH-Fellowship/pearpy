@@ -9,6 +9,9 @@ def t1(num1, num2):
 def t2(num):
     print('t2: ', num)
 
+def t3():
+    print('t3: 3')
+
 class TestPear(unittest.TestCase):
     def __create_pear__(self):
         self.pear = Pear()
@@ -62,6 +65,9 @@ class TestPear(unittest.TestCase):
         # Check that threads are added properly
         self.assertEqual(len(self.pear.get_threads()), 2)
         self.assertFalse(self.pear.is_empty())
+        # Check that default value for arg works
+        self.pear.add_thread(t3)
+        self.assertEqual(len(self.pear.get_threads()), 3)
 
     def test_remove_threads(self):
         self.__create_pear__()
@@ -86,6 +92,11 @@ class TestPear(unittest.TestCase):
         # Check that resources are locked when duplicate threads run
         self.__reset_pear__()
         self.__init_duplicate_threads__()
+        self.assertTrue(self.pear.run())
+        # Check that thread without args runs as expected
+        self.__reset_pear__()
+        self.__init__()
+        self.pear.add_thread(t3)
         self.assertTrue(self.pear.run())
 
 
