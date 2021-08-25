@@ -14,8 +14,8 @@ To stay up to date with Pearpy's releases, visit the [official page](https://pyp
 ## Usage
  1. Create a `Pear()` object. This will be a wrapper for all of your multithreaded processes.
  2. Identify the functions on which you would like to paralleilze computation.
- 3. Add your tasks to the Pear object. If a potential race condition is detected, target processes will be automatically locked.
- 4. Run the paraellelized processes simultaneously with `run()`.
+ 3. Add your tasks to the Pear. If a potential race condition is detected, target processes will be automatically locked.
+ 4. Run the paraellelized processes simultaneously.
 
 ## Example
 ```
